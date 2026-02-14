@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Henry's Profolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="container">
+
+<h1 style="background-color: rgb(126, 124, 162);">Tech Page</h1>
+<!-- A <br> element breaks text to the next line-->
+<p>Hello world!<br> HTML2</p>
+<!--This is a comment-->
+<!--Styless lets us change the appearance
+of our website-->
+<button style="background-color: red;"><a href="index.html">Click me</a></button>
+<!--Div's can become containers-->
+<div>
+<img src="PC.png" alt="Picture of PC">  
+</div>
+
+<table>
+    <tr>
+        <th class="test">Foods</th>
+        <th id="demo">Sports</th>
+        <th>Drinks</th>
+    </tr>
+
+    <tr>
+        <td class="test">BlueBerries</td>
+        <td>Soccer</td>
+        <td>Water</td>
+    </tr>
+    
+     <tr>
+        <td class="test">Banana</td>
+        <td>Football</td>
+        <td>Juice</td>
+    </tr>
+</table>
+
+<audio controls>
+    <source src="sea.mp3" typle="audio/mpeg">
+</audio>
+
+<footer style="background-color: rgb(126, 124, 162);">
+    <p>credit to Henry A-P</p>
+</footer>
+
+</div>
+<button type="button" onclick='docment.getElementById("Square").style.background-image: url("tech.gif");'>Click to call</button>
+<div id="Square"><img src="phonepng.png" id="call"></div>
+</body>
+
+<style>
+    #call{
+        background-image: url("cat.gif");
+        background-repeat: no-repeat;
+        background-position: 100px;
+        background-size: 150px 298px;
+
+    }
+    #Square{
+        position: relative;
+        left: 50%;
+        top: -850px;
+        animation-name: myAnimation;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes myAnimation {
+        0% {left:50%; top: 0px;}
+        100% {left:50%; top: -850px;}
+    }
+
+    @keyframes myCloseAnimation {
+        0% {left:50%; top: -850px;}
+        100% {left:50%; top: 0px;}
+    }
+
+    body{
+        background-image: url("tech.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    footer{
+        margin-top: 50%;
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        background-color: lightblue;
+    }
+    .test {
+        background: lightgreen;
+    }
+    #demo {
+        background-color: blueviolet;
+    }
+    #container {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+</style>
+
+<script>
+</script>
+
+</html>
