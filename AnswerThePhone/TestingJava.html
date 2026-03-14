@@ -23,13 +23,19 @@
 const form = document.getElementById("form")
 const log = document.getElementById("Demo")
 const inputfield = document.getElementById("fpassword")
- 
+
+const fruitbacket = ["Mango","Kiwi","Starfruit"];
+
 function logSubmit(event){
- event.preventDefault();  
- log.textContent = inputfield.value;
+ event.preventDefault();
+
+ log.textContent = fruitbacket[0];
+ 
 }
 
 form.addEventListener("submit", logSubmit)
+
+
 
 </script>
 
