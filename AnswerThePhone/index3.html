@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+<button type="button" onclick="fun()">Click Me!</button>
+<button type="button" onclick="imgchange()">Click Me!2</button>
+
+<p id="Demo">This will change with javascript</p>
+<img id="img" src = "cat.gif" type="button" onclick="imgchange()">
+
+</body>
+
+<script>
+function fun(){
+    document.getElementById("Demo").innerHTML = "bye World!";
+    document.getElementById("Demo").style.fontSize = "50px";
+}
+
+function imgchange(){
+    document.getElementById('img').src='catpick.jpg';
+    document.getElementById('img').classList.add("anim");
+}
+
+document.getElementById("Demo").innerHTML = "Hello World!";
+document.getElementById("Demo").style.color = "Red";
+
+</script>
+
+<style>
+    .anim {
+        position:relative;
+        animation-name: ani;
+        animation-duration: 4s;
+    }
+
+    @keyframes ani{
+        0%{ top:100px;}
+        25%{ top:200px;}
+        50%{ top:300px;}
+        75%{ top:400px;}
+        100%{ top:500px;}
+
+    }
+
+    #img{
+        width: 200px;
+        height: 200px;
+    }
+</style>
+
+</html>
+

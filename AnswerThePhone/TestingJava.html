@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScriptTesting</title>
+</head>
+<body>
+<h1>Header</h1>
+
+<p id="Demo">Not Hello!!!</p>
+
+<div>
+<form id="form" action="">
+    <label for="fpassword">Password:</label>
+    <input type = "text" id="fpassword" name="fpassword">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+</body>
+
+<script>
+const form = document.getElementById("form")
+const log = document.getElementById("Demo")
+const inputfield = document.getElementById("fpassword")
+ 
+function logSubmit(event){
+ event.preventDefault();  
+ log.textContent = inputfield.value;
+}
+
+form.addEventListener("submit", logSubmit)
+
+</script>
+
+<style>
+    p{
+        font-size: 50px;
+    }
+
+    div{
+       background-color: red;
+       width:300px;
+       margin:auto;
+    }
+</style>
+
+</html>
