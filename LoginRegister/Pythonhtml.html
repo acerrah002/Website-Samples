@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./offline/pyscript/core.css" />
+<script type="module" src="./offline/pyscript/core.js"></script>
+</head>
+
+<body>
+<div id="Hamburger">
+<input type="checkbox" />
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<button><a href="register.html">Link to register</a></button>
+
+<div id="container">
+<p id="demo"><b>Hello world!</b></p>
+<form>
+    <br>
+    <input type=""text id="fUsername" name="fUsername" value="Username/Email/Phone">
+    <br>
+    <input type=""text id="fpassword" name="fpassword" value="Password">
+    <br>
+    <button id="LogIn">Log In</button>
+    <br>
+    <a href="register.html" style="color: white;">Forgot Password</a>
+</form>
+</div>
+
+
+<div id="animationdiv"></div>
+
+<style>
+#Hamburger{
+    position: relative;
+    z-index: 1;
+}
+
+#Hamburger input{
+    position: absolute;
+    width:40px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+#Hamburger span{
+    display: block;
+    width: 33px; height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 3px;
+}
+
+
+@keyframes myAnimation{
+    0% {left:0px}
+    50% {left:100px}
+    100%{left:0px}
+}
+
+    #animationdiv{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    }
+
+    #LogIn{
+        background-color: grey;
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    #LogIn:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+    input{
+        margin-bottom: 10px;
+    }
+
+    p{
+        color:white;
+        font-size: 30px;
+
+    }
+    #container{
+        background-color: grey;
+        width: 300px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+    }
+
+    body{
+        background-image: url("backgroundimage.jpeg");
+        background-repeat: no-repeat;
+        background-size: 2000px;
+    }
+</style>
+
+<script type="py">
+ from pyscript import web
+ print("Hello from login!")
+ element = web.page["#demo"]
+ element.innerHTML = "ADD ACCOUNT"
+ #element.style["background-color"]= "red"
+ #element.style["font-size"]="30px"
+ print("hello world!")
+</script>
+</body>
+
+</html>
