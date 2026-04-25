@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./offline/pyscript/core.css" />
+<script type="module" src="./offline/pyscript/core.js"></script>
+</head>
+
+<body>
+<button><a href="register.html">Link to register</a></button>
+<div id="container">
+<p id="demo">Hello world!</p>
+<form>
+    <label for ="fUsername">Username:</label>
+    <br>
+    <input type=""text id="fUsername" name="fUsername">
+    <br>
+    <label for ="fpassword">Password:</label>
+    <br>
+    <input type=""text id="fpassword" name="fpassword">
+    <br>
+    <label for ="femail">Email:</label>
+    <br>
+    <input type=""text id="femail" name="femail">
+    <br>
+</form>
+</div>
+
+<style>
+    #container{
+
+        background-color: grey;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body{
+        background-color: black; 
+    }
+</style>
+
+<script type="py">
+ from pyscript import web
+ print("Hello from register!")
+ element = web.page["#demo"]
+ element.innerHTML = "Hello from register!"
+ element.style["background-color"]= "red"
+ element.style["font-size"]="30px"
+ print("hello world!")
+</script>
+</body>
+
+</html>
