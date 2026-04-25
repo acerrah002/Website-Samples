@@ -7,10 +7,11 @@
 
 <body>
 <div id="Hamburger">
-<input type="checkbox" />
-<span></span>
-<span></span>
-<span></span>
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <div id="animationdiv"></div>
 </div>
 
 <button><a href="register.html">Link to register</a></button>
@@ -30,7 +31,7 @@
 </div>
 
 
-<div id="animationdiv"></div>
+
 
 <style>
 #Hamburger{
@@ -57,6 +58,19 @@
     z-index: 3px;
 }
 
+#Hamburger input:checked{
+
+}
+
+@keyframes moveright{
+    0% {left:0px}
+    100% {left:100px}
+}
+
+@keyframes moveleft{
+    100% {left:100px}
+    0% {left:0px}
+}
 
 @keyframes myAnimation{
     0% {left:0px}
@@ -69,9 +83,6 @@
     height: 100px;
     background-color: red;
     position: relative;
-    animation-name: myAnimation;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
     }
 
     #LogIn{
