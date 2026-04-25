@@ -11,7 +11,11 @@
     <span></span>
     <span></span>
     <span></span>
-    <div id="animationdiv"></div>
+    <div id="animationdiv">
+        <p>Hello</p>
+        <p>Hello</p>
+    </div>
+    
 </div>
 
 <button><a href="register.html">Link to register</a></button>
@@ -58,9 +62,14 @@
     z-index: 3px;
 }
 
+#Hamburger #animationdiv{
+    animation: moveleft 0.5s forwards;
+
+}
 
 #Hamburger input:checked ~ #animationdiv{
-    animation: moveright 2s forwards;
+    opacity: 1;
+    animation: moveright 0.5s forwards;
 }
 
 @keyframes moveright{
@@ -69,8 +78,9 @@
 }
 
 @keyframes moveleft{
-    100% {left:100px}
-    0% {left:0px}
+    0% {left:100px}
+    100% {left:0px; opacity: 0;}
+
 }
 
 @keyframes myAnimation{
