@@ -43,7 +43,7 @@
     position: absolute;
     width:40px;
     cursor: pointer;
-    opacity: 0;
+    opacity: 50;
     z-index: 2;
     -webkit-touch-callout: none;
 }
@@ -58,8 +58,9 @@
     z-index: 3px;
 }
 
-#Hamburger input:checked{
 
+#Hamburger input:checked ~ #animationdiv{
+    animation: moveright 2s forwards;
 }
 
 @keyframes moveright{
@@ -78,12 +79,12 @@
     100%{left:0px}
 }
 
-    #animationdiv{
+#animationdiv{
     width: 100px;
     height: 100px;
     background-color: red;
     position: relative;
-    }
+}
 
     #LogIn{
         background-color: grey;
